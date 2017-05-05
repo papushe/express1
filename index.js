@@ -34,7 +34,7 @@ app.post('/getDataByName/', (req, res)=> {
     }
 });
 
-app.all('*', (req, res) => { // 404 error
+app.all('*', (req, res) => { // Manage conflicts
     res.status(200).json({"error": "404 - not found"});
 });
 
