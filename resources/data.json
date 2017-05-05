@@ -1,0 +1,30 @@
+[
+  {
+    "name":"The Fate of the Furious",
+    "genres":"action",
+    "type":"movie",
+    "date":"jan",
+    "year":2017
+  },
+  {
+    "name":"Kong: Skull Island",
+    "genres":"adventure",
+    "type":"series",
+    "date":"feb",
+    "year":2017
+  },
+  {
+    "name":"The Lego Batman Movie",
+    "genres":"animation",
+    "type":"tv show",
+    "date":"mar",
+    "year":2017
+  },
+  {
+    "name":"The Boss Baby",
+    "genres":"comedy",
+    "type":"movie",
+    "date":"apr",
+    "year":2017
+  }
+]
