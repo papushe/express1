@@ -13,6 +13,11 @@ let     genresAndType = modules.getGenresAndType(1, 1); // create var of getGenr
 app.use(bodyParser.json()); // parsing application/json
 app.use(bodyParser.urlencoded({extended:true})); // parsing application/x-www-form-urlencoded
 
+
+app.get('/', (req,res)=>{
+    res.sendFile('index.html');
+});
+
 app.get('/getAllMoviesData', (req, res)=> {
     res.status(200).json({"movies Data": allMovies}); // get all data movies by getAllMoviesData() function
 });
