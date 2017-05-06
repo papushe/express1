@@ -39,7 +39,7 @@ app.get('/', function (req, res) {
         </div>
         <div>
             <h2>One cut by post</h2>
-            <p>check it out on the REST client<p/>
+            <p>check it out on the REST client date=jan<p/>
             <a target="_blank" href="https://express1vod.herokuapp.com/getDataByName">https://express1vod.herokuapp.com/getDataByName</a>
         </div>
     </body>
