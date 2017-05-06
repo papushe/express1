@@ -12,10 +12,36 @@ let     genresAndType = modules.getGenresAndType(1, 1); // create var of getGenr
 
 app.use(bodyParser.json()); // parsing application/json
 app.use(bodyParser.urlencoded({extended:true})); // parsing application/x-www-form-urlencoded
+app.use('/assets', express.static(`${__dirname}/public`));
 
 
-app.get('/', (req,res)=>{
-    res.sendFile('index.html');
+app.get('/', function (req, res) {
+    res.send(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <link href=assets/style.css rel=stylesheet>
+        <title>New Movies</title>
+    </head>
+    <body>
+        <h1>My VOD - New Movies</h1>
+        <div>
+            <h2>All movies</h2>
+            <a  href="https://express1vod.herokuapp.com/getAllMoviesData">https://express1vod.herokuapp.com/getAllMoviesData</a>
+            <p>You will see all the data json<p/>
+        </div>
+        <div>
+            <h2>Two cuts by get</h2>
+            <a href="https://express1vod.herokuapp.com/getMoviesName/action/movie">https://express1vod.herokuapp.com/getMoviesName/action/movie</a>
+            <p>You will see all the data json after 2 cuts genres(action) and date(jan)<p/>
+        </div>
+        <div>
+            <h2>One cut by post</h2>
+            <a href="https://express1vod.herokuapp.com/getAllMoviesData">https://express1vod.herokuapp.com/getAllMoviesData</a>
+            <p>check it out on the REST client<p/>
+        </div>
+    </body>
+   </html>`);
 });
 
 app.get('/getAllMoviesData', (req, res)=> {

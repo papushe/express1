@@ -1,0 +1,10 @@
+*{
+    /*background: darkgrey;*/
+}
+div{
+    float: left;
+    margin: 10px;
+}
+h1{
+    text-align: center;
+}
