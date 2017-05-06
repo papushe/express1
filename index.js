@@ -18,8 +18,8 @@ app.use('/assets', express.static(`${__dirname}/public`));
 app.get('/', function (req, res) {
     console.log("Home api running");
     res.set('header-One', 'Home');
-    res.send(`
-    <!DOCTYPE html>
+    res.send(
+    `<!DOCTYPE html>
     <html>
     <head>
         <link href="assets/style.css" rel=stylesheet>
