@@ -16,6 +16,7 @@ app.use('/assets', express.static(`${__dirname}/public`));
 
 
 app.get('/', function (req, res) {
+    console.log("Home api running");
     res.set('header-One', 'Home');
     res.send(`
     <!DOCTYPE html>
@@ -47,11 +48,13 @@ app.get('/', function (req, res) {
 });
 
 app.get('/getAllMoviesData', (req, res)=> {
+    console.log("All data is showing");
     res.set('header-Two', 'All data');
     res.status(200).json({"movies Data": allMovies}); // get all data movies by getAllMoviesData() function
 });
 
 app.get('/getMoviesName/:movies_genres/:movies_type', (req, res)=> {
+    console.log("Two cuts, genres and type");
     res.set('header-Three', 'Two cuts');
     genresAndType = modules.getGenresAndType(req.params.movies_genres, req.params.movies_type); // create var of getGenresAndType function with 2 parameters
     if(genresAndType.length == 0){ // if the array is empty
@@ -62,6 +65,7 @@ app.get('/getMoviesName/:movies_genres/:movies_type', (req, res)=> {
 });
 
 app.post('/getDataByName/', (req, res)=> {
+    console.log("In post app");
     res.set('header-Four', 'One data, post');
     let movie = req.body.date, // create bodyParser var
         byName = modules.getDataByName(movie); // insert it to the function getDataByName
