@@ -8,6 +8,8 @@ const   express = require('express'),
         allMovies = modules.getAllMoviesData(),
         port = process.env.PORT || 3000;
 
+let     genresAndType = modules.getGenresAndType(1, 1); // create var of getGenresAndType function with 2 parameters
+
 app.use(bodyParser.json()); // parsing application/json
 app.use(bodyParser.urlencoded({extended:true})); // parsing application/x-www-form-urlencoded
 
@@ -16,7 +18,7 @@ app.get('/getAllMoviesData', (req, res)=> {
 });
 
 app.get('/getMoviesName/:movies_genres/:movies_type', (req, res)=> {
-    let genresAndType = modules.getGenresAndType(req.params.movies_genres, req.params.movies_type); // create var of getGenresAndType function with 2 parameters
+    genresAndType = modules.getGenresAndType(req.params.movies_genres, req.params.movies_type); // create var of getGenresAndType function with 2 parameters
     if(genresAndType.length == 0){ // if the array is empty
         res.status(200).json({error: "wrong input, try again"}); // error
     } else {
