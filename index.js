@@ -62,7 +62,7 @@ app.get('/getMoviesName/:movies_genres/:movies_type', (req, res)=> {
 });
 
 app.post('/getDataByName/', (req, res)=> {
-    res.set('header-Two', 'One data, post');
+    res.set('header-Four', 'One data, post');
     let movie = req.body.date, // create bodyParser var
         byName = modules.getDataByName(movie); // insert it to the function getDataByName
     if(byName.length == 0){ // if the array is empty
