@@ -29,18 +29,18 @@ app.get('/', function (req, res) {
         <h1>My VOD - New Movies</h1>
         <div>
             <h2>All movies</h2>
-            <a target="_blank" href="https://express1vod.herokuapp.com/getAllMoviesData">https://express1vod.herokuapp.com/getAllMoviesData</a>
             <p>You will see all the data json<p/>
+            <a target="_blank" href="https://express1vod.herokuapp.com/getAllMoviesData">https://express1vod.herokuapp.com/getAllMoviesData</a>
         </div>
         <div>
             <h2>Two cuts by get</h2>
-            <a target="_blank" href="https://express1vod.herokuapp.com/getMoviesName/action/movie">https://express1vod.herokuapp.com/getMoviesName/action/movie</a>
             <p>You will see all the data json after 2 cuts genres(action) and date(jan)<p/>
+            <a target="_blank" href="https://express1vod.herokuapp.com/getMoviesName/action/movie">https://express1vod.herokuapp.com/getMoviesName/action/movie</a>
         </div>
         <div>
             <h2>One cut by post</h2>
-            <a target="_blank" href="https://express1vod.herokuapp.com/getDataByName">https://express1vod.herokuapp.com/getDataByName</a>
             <p>check it out on the REST client<p/>
+            <a target="_blank" href="https://express1vod.herokuapp.com/getDataByName">https://express1vod.herokuapp.com/getDataByName</a>
         </div>
     </body>
    </html>`);
