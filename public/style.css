@@ -1,9 +1,10 @@
-*{
-    /*background: darkgrey;*/
+body{
+    background: url("f8.png");
 }
 div{
     float: left;
     margin: 10px;
+
 }
 h1{
     text-align: center;
