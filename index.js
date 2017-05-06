@@ -43,6 +43,24 @@ app.get('/', function (req, res) {
             <p>check it out on the REST client date=jan<p/>
             <a target="_blank" href="https://express1vod.herokuapp.com/getDataByName">https://express1vod.herokuapp.com/getDataByName</a>
         </div>
+        <div id="json">
+        <h2>json example</h2>
+        {
+            <p>"name": "The Fate of the Furious",</p>
+            <p>"genres": "action",</p>
+            <p>"type": "movie",</p>
+            <p>"date": "jan",</p>
+            <p>"year": 2017</p>
+        }
+        </div>
+        <div id="json">
+        <h2>about me</h2>
+        {
+            <p>"name": "papushe",</p>
+            <p>"date": "9/1/88",</p>
+            <p>"role": "software developer at mentor graphics"</p>
+        }
+        </div>
     </body>
    </html>`);
 });
