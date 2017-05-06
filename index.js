@@ -62,7 +62,7 @@ app.get('/', function (req, res) {
         }
         </div>
     </body>
-   </html>` );
+   </html>`);
 });
 
 app.get('/getAllMoviesData', (req, res)=> {
