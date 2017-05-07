@@ -39,7 +39,7 @@ app.post('/getDataByName/', (req, res)=> {
     res.set('header-Four', 'One data, post');
     let movie = req.body.date, // create bodyParser var
         byName = modules.getDataByName(movie); // insert it to the function getDataByName
-    byName.length == 0 ? res.status(200).json({error: "wrong input, try again"}) : res.status(200).json({"All data by date": byName}); // return the data with json
+    byName.length == 0 ? res.status(200).json({error: "wrong input, try again"}) : res.status(200).json({"All data by date": byName}); // return the data with json if byName[] not empty
 });
 
 app.all('*', (req, res) => { // Manage conflicts

@@ -1,11 +1,17 @@
 body{
-    background:lightblue;
+    background:url("cinema.jpg");
 }
 div{
     float: left;
     margin: 10px;
     padding: 10px;
     border: 2px solid darkgreen;
+    border-radius: 10px;
+    background: white;
+    opacity: 0.8;
+}
+h1{
+    color:white;
 }
 h1, h2{
     text-align: center;
