@@ -29,3 +29,11 @@ a{
 h2{
     margin-top: 0;
 }
+.red{
+    color: red;
+    font-weight: bold;
+}
+.green{
+    color: green;
+    font-weight: bold;
+}
