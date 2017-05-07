@@ -31,11 +31,7 @@ app.get('/getMoviesName/:movies_genres/:movies_type', (req, res)=> {
     console.log("Two cuts, genres and type");
     res.set('header-Three', 'Two cuts');
     genresAndType = modules.getGenresAndType(req.params.movies_genres, req.params.movies_type); // create var of getGenresAndType function with 2 parameters
-    if(genresAndType.length == 0){ // if the array is empty
-        res.status(200).json({error: "wrong input, try again"}); // error
-    } else {
-        res.status(200).json({"Movies Name by genres and type": genresAndType}); // return the data with json
-    }
+    genresAndType.length == 0 ? res.status(200).json({error: "wrong input, try again"}) : res.status(200).json({"Movies Name by genres and type": genresAndType});
 });
 
 app.post('/getDataByName/', (req, res)=> {
@@ -43,11 +39,7 @@ app.post('/getDataByName/', (req, res)=> {
     res.set('header-Four', 'One data, post');
     let movie = req.body.date, // create bodyParser var
         byName = modules.getDataByName(movie); // insert it to the function getDataByName
-    if(byName.length == 0){ // if the array is empty
-        res.status(200).json({error: "wrong input, try again"}); // error
-    }else {
-        res.status(200).json({"All data by date": byName}); // return the data with json
-    }
+    byName.length == 0 ? res.status(200).json({error: "wrong input, try again"}) : res.status(200).json({"All data by date": byName}); // return the data with json
 });
 
 app.all('*', (req, res) => { // Manage conflicts
