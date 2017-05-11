@@ -31,7 +31,7 @@ app.get('/getMoviesName/:movies_genres/:movies_type', (req, res)=> {
     console.log("Two cuts, genres and type");
     res.set('header-Three', 'Two cuts');
     genresAndType = modules.getGenresAndType(req.params.movies_genres, req.params.movies_type); // create var of getGenresAndType function with 2 parameters
-    genresAndType.length == 0 ? res.status(200).json({error: "wrong input, try again"}) : res.status(200).json({"Movies Name by genres and type": genresAndType});
+    genresAndType.length == 0 ? res.status(200).json({error: "wrong input, try again"}) : res.status(200).json({"Movie Actor name and roll by genres and type": genresAndType});
 });
 
 app.post('/getDataByName/', (req, res)=> {
