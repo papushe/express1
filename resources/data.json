@@ -4,27 +4,67 @@
     "genres":"action",
     "type":"movie",
     "date":"jan",
-    "year":2017
+    "year":2017,
+    "actors":[
+      {
+        "name":"Moshe",
+        "role":"main"
+      },
+      {
+        "name":"Dan",
+        "role":"sub"
+      }
+    ]
   },
   {
     "name":"Kong: Skull Island",
     "genres":"adventure",
     "type":"series",
     "date":"feb",
-    "year":2017
+    "year":2017,
+    "actors":[
+      {
+        "name":"Moshe",
+        "role":"main"
+      },
+      {
+        "name":"Dan",
+        "role":"sub"
+      }
+    ]
   },
   {
     "name":"The Lego Batman Movie",
     "genres":"animation",
     "type":"tv show",
     "date":"mar",
-    "year":2017
+    "year":2017,
+    "actors":[
+      {
+        "name":"Moshe",
+        "role":"main"
+      },
+      {
+        "name":"Dan",
+        "role":"sub"
+      }
+    ]
   },
   {
     "name":"The Boss Baby",
     "genres":"comedy",
     "type":"movie",
     "date":"apr",
-    "year":2017
+    "year":2017,
+    "actors":[
+      {
+        "name":"Moshe",
+        "role":"main"
+      },
+      {
+        "name":"Dan",
+        "role":"sub"
+      }
+    ]
   }
 ]

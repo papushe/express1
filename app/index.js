@@ -15,7 +15,7 @@ function genresAndType(movies_genres,movies_type){ //get 2 parameters
     for (let i in data) { //run in the json
         let movie = data[i];
         if (movie.genres == movies_genres && movie.type == movies_type) { // checking if the movie... == parameters
-            byMovieGenres.push(movie.name); // push it to the array
+            byMovieGenres.push(movie.actors.name); // push it to the array
         }
     }
 }
