@@ -1,3 +1,5 @@
+'use strict';
+
 const mongoose = require('mongoose'),
     schema = mongoose.Schema,
     moviesSchema = new schema({

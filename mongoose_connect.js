@@ -1,7 +1,9 @@
-const mongoose = require('mongoose'),
-    consts = require('./const').MLAB_KEY,
-    Movie = require('./movies.js').Movies,
-    Promise    = require('promise');
+'use strict';
+
+const   mongoose = require('mongoose'),
+        consts = require('./const').MLAB_KEY,
+        Movie = require('./movies.js').Movies,
+        Promise    = require('promise');
 
 mongoose.connect(consts); //get MLAB_KEY
 const conn = mongoose.connection; //get default connection
@@ -10,7 +12,7 @@ conn.on('error', (err) => { // if err
     console.log(`connection error: ${err}`);
 });
 
-class newMovies{
+class newMovies {
     allData(){
         return new Promise((resolve,reject)=>{
             Movie.find({} ,'-_id', // without _id

@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended:true})); // parsing application/x-www-fo
 app.use('/assets', express.static(`${__dirname}/public`)); // public as assets
 
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
     console.log("Home api running");
     res.set('header-One', 'Home');
     res.sendfile(`${__dirname}/index.html`);
