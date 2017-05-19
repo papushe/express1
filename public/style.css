@@ -37,6 +37,9 @@ h2{
     color: green;
     font-weight: bold;
 }
+.date{
+    font-weight: bold;
+}
 .json .bracket{
     margin: 0 0 0 37px;
 }
