@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose'),
     schema = mongoose.Schema,
-    moviesSchema = new schema({
+    movie = new schema({
         name: {type:String, index:1, required:true, unique:true},
         genres: String,
         type: String,
@@ -19,7 +19,7 @@ const mongoose = require('mongoose'),
             }
         ]
     }, {collection: 'movies'}),
-    Movies = mongoose.model('Movies', moviesSchema);
+    Movies = mongoose.model('Movies', movie);
 
 module.exports={
     Movies : Movies
