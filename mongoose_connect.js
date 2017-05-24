@@ -3,7 +3,7 @@
 const   mongoose = require('mongoose'),
         consts = require('./const').MLAB_KEY,
         Movie = require('./movies.js').Movies,
-        Promise    = require('promise');
+        Promise = require('promise');
 
 mongoose.connect(consts); //get MLAB_KEY
 const conn = mongoose.connection; //get default connection
