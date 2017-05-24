@@ -17,7 +17,7 @@ app.use('/assets', express.static(`${__dirname}/public`)); // public as assets
 app.get('/', (req, res) => {
     console.log("Home api running");
     res.set('header-One', 'Home');
-    res.sendfile(`${__dirname}/index.html`);
+    res.status(200).sendfile(`${__dirname}/index.html`);
 });
 
 app.get('/getAllMoviesData', (req, res) => {
@@ -30,7 +30,7 @@ app.get('/getAllMoviesData', (req, res) => {
         })
 });
 
-app.get('/getMoviesName/:movies_genres/:movies_type', (req, res) => {
+app.get('/getActorNameAndRole/:movies_genres/:movies_type', (req, res) => {
     console.log("Two cuts, genres and type");
     res.set('header-Three', 'Two cuts');
     getGenresAndType(req.params.movies_genres, req.params.movies_type)
@@ -52,7 +52,7 @@ app.post('/getDataByDate/', (req, res) => {
 });
 
 app.all('*', (req, res) => { // Manage conflicts
-    res.status(200).json({"error": "404 - not found"});
+    res.status(200).json({"error": "404 - not found (Wrong input or Wrong url)"});
 });
 app.listen(port);
 console.log(`listening on port ${port}`);
