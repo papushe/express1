@@ -12,6 +12,14 @@ const   express = require('express'),
 app.use(bodyParser.json()); // parsing application/json
 app.use(bodyParser.urlencoded({extended:true})); // parsing application/x-www-form-urlencoded
 app.use('/assets', express.static(`${__dirname}/public`)); // public as assets
+app.use(
+    (req,res,next) => {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers",
+            "Origin, X-Requested-With, Content-Type, Accept");
+        res.set("Content-Type", "application/json");
+        next();
+    });
 
 
 app.get('/', (req, res) => {

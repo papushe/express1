@@ -18,7 +18,10 @@ class newMovies {
             Movie.find({} ,'-_id', // without _id
                 (err, movie) => {
                     if (err) reject(err);
-                    else resolve(movie);
+                    else{
+                        resolve(movie);
+                        console.log(movie);
+                    }
                 });
         })
     }
