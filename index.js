@@ -19,8 +19,6 @@ app.use(bodyParser.json()); // parsing application/json
 app.use(bodyParser.urlencoded({extended:true})); // parsing application/x-www-form-urlencoded
 app.use('/assets', express.static(`${__dirname}/public`)); // public as assets
 
-
-
 app.get('/', (req, res) => {
     console.log("Home api running");
     res.set('header-One', 'Home');
@@ -32,8 +30,8 @@ app.get('/getAllMoviesData', (req, res) => {
     res.set('header-Two', 'All data');
     all()
         .then((result) => {
-            result.length === 0 ? res.status(200).json({error: "wrong input, try again"}) :
-                res.status(200).json({"All movies Data": result}); // return the data with json if result not empty
+            result.length === 0 ? res.json({error: "wrong input, try again"}) :
+                res.json(result); // return the data with json if result not empty
         })
 });
 
@@ -42,8 +40,8 @@ app.get('/getActorNameAndRole/:movies_genres/:movies_type', (req, res) => {
     res.set('header-Three', 'Two cuts');
     getGenresAndType(req.params.movies_genres, req.params.movies_type)
         .then((result) => {
-            result.length === 0 ? res.status(200).json({error: "wrong input, try again"}) :
-                res.status(200).json({"Movie Actor name and role by genres and type": result}); // return the data with json if result not empty
+            result.length === 0 ? res.json({error: "wrong input, try again"}) :
+                res.json(result); // return the data with json if result not empty
         })
 });
 
@@ -54,7 +52,7 @@ app.post('/getDataByDate/', (req, res) => {
     dataByName(movie)
         .then((result) => {
             result.length === 0 ? res.status(200).json({error: "wrong input, try again"}) :
-                res.status(200).json({"All data by date cut": result}); // return the data with json if result not empty
+                res.json(result); // return the data with json if result not empty
         });
 });
 
