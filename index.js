@@ -35,7 +35,7 @@ app.get('/getAllMoviesData', (req, res) => {
         })
 });
 
-app.get('/getActorNameAndRole/:movies_genres/:movies_type', (req, res) => {
+app.get('/getActorData/:movies_genres/:movies_type', (req, res) => {
     console.log("Two cuts, genres and type");
     res.set('header-Three', 'Two cuts');
     getGenresAndType(req.params.movies_genres, req.params.movies_type)

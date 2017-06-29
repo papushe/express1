@@ -27,14 +27,11 @@ class newMovies {
     }
     genresAndType(movies_genres,movies_type) { //get 2 parameters
         return new Promise((resolve,reject)=>{
-            let nameAndRole=[]; //new array
-            Movie.find({genres:{$eq: movies_genres}, type:{$eq:movies_type}},
-                (err, movie) => {
+            Movie.find({genres:{$eq: movies_genres}, type:{$eq:movies_type}},'-_id',// without _id
+                (err, data) => {
                 if (err) reject(err);
                 else {
-                    nameAndRole.push(movie[0].actors[0].name); // push actor name
-                    nameAndRole.push(movie[0].actors[0].role); // push actor role
-                    resolve(nameAndRole);
+                    resolve(data);
                 }
             });
         })
